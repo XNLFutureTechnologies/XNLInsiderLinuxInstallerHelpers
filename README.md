@@ -23,7 +23,7 @@ The names of the scripts basically already tell what they are for :). If you wan
 I will make a small list here though which one does what (until this would for some reason become TOO big/long to 'maintain' ;)  
   
 **XNLNVidiaInstall.sh**  
-Will install everything required to install the NVidia drivers for your videocard, download the correct ones (Linux 64Bit) from here: https://www.nvidia.com/en-in/drivers/ and then **save that .run file in the same folder as this script and start the XNL script (NOT the .run file!)**  
+Will install everything required to install the NVidia drivers for your videocard, download the correct ones (Linux 64Bit) from here: https://www.nvidia.com/en-in/drivers/ and then **save that .run file in the same folder as this script and start the XNL script (NOT the .run file!)** This script will also make sure that the 32 Bit drivers of NVidia will be installed **alongside** the 64 Bit drivers. This is important if you for example want to play steam games (using proton for example) on your pc. Without these 32 Bit drivers those games will simply not work (in most cases).
   
 **XNLJitsiMeetInstall.sh**  
 Installs Jitsi Meet ("*our New Skype*") as a flatpak but it will first install (and setup) the 'flatpak system' so it can actually use it to install Jitsi.  
@@ -40,6 +40,15 @@ chmod +x XNLNVidiaInstall.sh
 ./XNLNVidiaInstall.sh  
 
 This would then install the requirements of your NVidia driver and then start the .run installer for that driver (which you will need to download yourself for your card as explained in that script btw ;) ).
+  
+# Terminal? What Terminal? WHERE?
+Ohhhhh boyyyyy.. You're *THAT* new huh? ;) No worries ;). If you're using the system we (currently) recommend using (internally), then you can simply open a terminal by either pressing **crtl+alt+t** (however this will in most cases open the terminal in your home directory (~), and you would then for example need to do **cd Downloads** to 'move into' downloads directory, or you can in your file manager (most support this, and the KDE Standard (Dolphin) sure does) right click and click on **Open Terminal Here**
+
+# Small additional beginner tips (terminal commands/tricks)
+cd = Change Directory  
+ls = will show the contents of the directory  
+When typing a file name, you can press the TAB Key and it will 'auto complete' until where it would for example 'collide' with another filename in the same folder. Make this feature a habbit because it will save you A LOT of time eventually once you get the hang of it ;)  
+  
 
 
 
