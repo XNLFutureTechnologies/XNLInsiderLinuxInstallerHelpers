@@ -37,8 +37,6 @@ echo "failed to load DLL etc.. Do NOT worry about those."
 echo " "
 echo "You MIGHT even get a popup that wine has crashed (in Linux itself) while the"
 echo "script just keeps doing 'it's thing'. Don't worry about this either :)"
-echo " "
-echo "Current Install Size (of the additional components!): Around 2.2GB"
 echo "================================================================================"
 echo " "
 read -p "Are you sure that you want to continue installing the 'XNL Wine Package'? [Y/N] " confirm
@@ -69,6 +67,14 @@ export WINEARCH=win32
 rm -rf "$WINEPREFIX"
 
 wineboot
+
+# Map up to 32 serial ports (ttyUSB0-31) to Wine COM1-COM32
+for i in {1..32}; do
+  ln -sf /dev/ttyUSB$((i-1)) "$WINEPREFIX/dosdevices/com$i"
+one
+
+# Ensuring the user actually has access to them (easiest way for beginners to 'activate' this access is just to reboot)
+sudo usermod -a -G dialout $USER
 
 winetricks -q dotnet20      # .NET Framework 2.0
 winetricks -q dotnet30      # .NET Framework 3.0
