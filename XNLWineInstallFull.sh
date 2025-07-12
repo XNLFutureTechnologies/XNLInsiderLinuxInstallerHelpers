@@ -37,6 +37,8 @@ echo "failed to load DLL etc.. Do NOT worry about those."
 echo " "
 echo "You MIGHT even get a popup that wine has crashed (in Linux itself) while the"
 echo "script just keeps doing 'it's thing'. Don't worry about this either :)"
+echo " "
+echo "Current Install Size (of the additional components!): Around 2.2GB"
 echo "================================================================================"
 echo " "
 read -p "Are you sure that you want to continue installing the 'XNL Wine Package'? [Y/N] " confirm
