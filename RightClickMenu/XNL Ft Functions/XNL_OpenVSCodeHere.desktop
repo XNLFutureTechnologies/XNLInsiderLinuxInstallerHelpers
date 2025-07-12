@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=openVSCodeHere
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=XNL Ft. Functions
+
+[Desktop Action openVSCodeHere]
+Name=Open VS Code Here
+Icon=com.visualstudio.code.oss
+Exec=code --new-window "%f"
