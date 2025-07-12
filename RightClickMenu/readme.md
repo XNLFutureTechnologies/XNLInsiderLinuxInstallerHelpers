@@ -49,6 +49,12 @@ Once you're in that directory, just paste the entire **kservices5** you've downl
   
 NOTE: These functions will only appear where they are usable. The Wine functions will for example only show up when you right click on an .exe file.
 
+# Example Difference when making your own ServiceMenus
+The *XNL Ft. Functions* menu uses a sepperate .desktop file ("script") for each menu option/item, while the *XNL Ft. Wine* menu used a single .desktop file with all the options in it at once. I've done this on purpose so it is still easy to understand for beginners and they also have an example of a more cleaner solution with multiple items at once :)
+
+# I do see script errors when running kbuildsycoca5 for example??!!
+Yes, that is possible, most likely you will get a few "Invalid escape sequence" errors. Very simply explained: The menu options which create a Launcher (shortcut) use "inline Bash scripts" to generate these shortcuts, and these scripts need to quote the full path of the selected file (to handle spaces in paths, e.g., /media/drive_d/Personal Files/demo.exe to that it becomes: **"**/media/drive_d/Personal Files/demo.exe**"** in the .desktop file it creates). But the KDE .desktop file parser does not support certain escape sequences (like \") in the Exec line. This does however not matter since the entire command is wrapped in single quotes (' '), the KDE parser passes it as-is to Bash, which then does interpret the escapes correctly. So, even if you see a warning like that, it does not affect the functionality and the shortcuts work just as intended :).
+
 
 
 
