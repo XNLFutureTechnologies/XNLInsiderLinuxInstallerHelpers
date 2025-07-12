@@ -26,7 +26,7 @@ echo "This script installs quite an extensive set of Wine 'addons' for the tools
 echo "and otherstuff we work with. This should not be a problem for most, but if you"
 echo "want to know exactly what it installs, then please read the script BEFORE installing!"
 echo " "
-echo "IF you have a ~/.wine_base installation, then this installer WILL REMOVE IT!"
+echo "IF you have a ~/.wine_xnlft installation, then this installer WILL REMOVE IT!"
 echo "This however also means that you can use this script (again) to 'reinstall/clean'"
 echo "your base wine installation if something 'got messed up'."
 echo " "
@@ -60,7 +60,7 @@ sudo apt install -y winetricks
 sudo apt install -y winbind
 
 # Set up Wine prefix
-export WINEPREFIX="$HOME/.wine_base"
+export WINEPREFIX="$HOME/.wine_xnlft"
 
 # Set Wine to run in 32 bit
 export WINEARCH=win32
