@@ -27,13 +27,13 @@ This menu for example helps you easily (and quickly) perform actions as you wher
 **NOTE:** It can can also create a shortcut to an directory and will then use a **green** icon for the folder (directory) so that it's clear that it's a shortcut and not the actual folder (DO STILL BE CAREFULL WHEN REMOVING 'GREEN FOLDERS' OBVIOUSLY! Since there could still be other applications which have set their 'folder color' to green!!)
   
 **Wine Options**  
-This menu also contains the following items (only when right clicking on an .exe file!):  
+There is (now on request) also second menu (only when right clicking on an .exe file!) called ***XNL Ft. Wine*** which will show the following:
 - Start with Wine
 - Create Wine Launcher (Shortcut)
 - Set Wine to Windows 10 Mode
 - Set Wine to Windows 7 Mode
 - Set Wine to Windows XP Mode
-  
+
 NOTE: To use the XNL Ft. Wine options you will first have to run the **XNLWineInstallFull.sh** so that our 'base XNL wine environment' is setup properly!  
   
 You can then use these to run most of the windows applications (and even games!) just with a simple right click and then using the XNL Ft. Functions menu :)  
