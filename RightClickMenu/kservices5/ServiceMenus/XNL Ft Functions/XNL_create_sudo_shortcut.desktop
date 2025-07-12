@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-executable;application/x-iso9660-appimage;
+Actions=createDesktopShortcut
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=XNL Ft. Functions
+
+[Desktop Action createDesktopShortcut]
+Name=Create Sudo Launcher (Shortcut)
+Icon=application-x-desktop
+Exec=bash -c 'target="%f"; name="(SUDO) $(basename "$target")"; dest="%d/$name.desktop"; printf "[Desktop Entry]\nType=Application\nName=%s\nExec=%s\nIcon=preferences-system-windows-effect-dimscreen\nTerminal=false\nX-KDE-SubstituteUID=true\n" "$name" "$target" > "$dest"; chmod +x "$dest"'
