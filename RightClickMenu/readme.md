@@ -43,9 +43,7 @@ Usually you would actually setup a 'Wine environment' per application (prefix), 
 
   
 # How do I install these 'Right-click-options'??
-Download, extract and then copy the kservices5 directory (folder) to **~/.local/share/**  
-You can for example just open Dolphin, click on the path at the top and then copy-paste **~/.local/share/**. The tilde (~) will then automatically be replaced for /home/[YourUsername].  
-Once you're in that directory, just paste the entire **kservices5** you've downloaded and then the new 'XNL Ft. Functions' should appear in your right-click menu in Dolphin.  
+UPDATE: No manual copy-pasting of folders anymore for this 'install', you can now just run ./XNLInstallRightClickMenus.sh (after chmodding it ofcourse ;)) and it will install these menu's automatically for you.
   
 NOTE: These functions will only appear where they are usable. The Wine functions will for example only show up when you right click on an .exe file.
 
