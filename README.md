@@ -32,8 +32,11 @@ Installs Jitsi Meet ("*our New Skype*") as a flatpak but it will first install (
 Installs **our XNL FULL Wine Setup Base System** including A LOT of runtimes which are (or might) be used by the applications, games, tools etc we use(d). For 'outsiders' it is HIGHLY recommended to first open this script in Kate (or any other editor) and check what it installs. If you don't want certain things to be installed, then you can disable them by outcommenting them (putting an # infront of the line).  Wine is used to run most of the Windows desktop applications we use, but in this configuration it can also run A LOT of the older games just fine. However for most games I would recommend running them with Proton (or even via steam with uses proton for example).
 
 **XNLVirtualMachineSetup.sh**  
-Installs **qemu-kvm** and **Virtual Machine Manager** (plus the required basic setup)
+Installs **qemu-kvm** and **Virtual Machine Manager** (plus the required basic setup)  
 
+**XNLInstallRightClickMenus.sh**  
+This VERY simple 'helper script' will install the XNL Ft. Right-Click-Menus in your file browser (Dolphin for example). Please see the directory ***RightClickMenu*** for more detailed information about this 'feature'. IMPORTANT NOTE: This menu assumes you are using KDE, have VSCode installed AND that you are using the XNL Ft. Wine Base Setup!  
+  
 # How can I run them/They don't start!
 After you've downloaded the .sh script(s), or you have saved the contents of one to a new .sh file on your own pc, you will first need to open a terminal (in the same directory as the script), and then use the command **chmod +x [scriptname].sh**  
 
