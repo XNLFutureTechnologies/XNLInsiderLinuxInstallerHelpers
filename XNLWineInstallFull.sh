@@ -128,9 +128,9 @@ done
 sudo usermod -a -G dialout $USER
 
 winetricks -q dotnet20        # .NET Framework 2.0
-#winetricks -q dotnet30        # .NET Framework 3.0 (Disabled in Update 1.1, conflicts with 3.5)
-winetricks -q dotnet35        # .NET Framework 3.5
-winetricks -q dotnet35sp1     # .NET Framework 3.5 SP1
+winetricks -q dotnet30        # .NET Framework 3.0 (Disabled in Update 1.1, conflicts with 3.5)
+#winetricks -q dotnet35        # .NET Framework 3.5
+#winetricks -q dotnet35sp1     # .NET Framework 3.5 SP1
 winetricks -q dotnet40        # .NET Framework 4.0
 winetricks -q dotnet45        # .NET Framework 4.5
 winetricks -q dotnet48        # .NET Framework 4.8
@@ -176,30 +176,6 @@ winetricks -q mfc42           # Microsoft Foundation Classes 4.2
 winetricks -q mfc40           # Microsoft Foundation Classes 4.0
 winetricks -q msvcirt         # Microsoft Visual C++ Runtime
 
-# ********************************************************************************************
-# Since Update 1.1 (Either on request or due to me noticing I forgot a couple)
-# ********************************************************************************************
-
-# A LITTLE bit more support for some other types of games
-winetricks -q dxvk2030        # DXVK 2.0.3 (Vulkan-based D3D)
-winetricks -q dinput8         # Direct Input 8
-winetricks -q xinput          # XInput (Xbox controller support)
-winetricks -q physx           # NVIDIA Physics support (LIMITED OBVIOUSLY!)
-winetricks -q dsound          # DirectSound
-
-# Media and codecs based stuff
-winetricks -q openal          # OpenAL audio library
-winetricks -q l3codecx        # MPEG L3 Audio Codecs
-winetricks -q allcodecs       # All video codecs (except wmp)
-
-# Mostly Legacy stuff for for old applications (Visual Basic 6 and Win9X era)
-winetricks -q vb5run          # Visual Basic 5 runtime
-winetricks -q vb6run          # Visual Basic 6 runtime
-winetricks -q tabctl32        # Tab Control ActiveX
-winetricks -q setupapi        # Setup API
-winetricks -q sapi            # Speech API
-winetricks -q richtx32        # RichText ActiveX
-winetricks -q msdxmocx        # Media Player 2 ActiveX Control (VB6)
 
 # ********************************************************************************************
 # Still working on solutions for these (or even 'custom patches'), but not much success yet,
