@@ -2,7 +2,7 @@
 Type=Service
 X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=application/x-ms-dos-executable;
-Actions=AopenWithWine;BcreateWineShortcut;CsetWineWinXP;DsetWineWin7;EsetWineWin10;FStartWineConfig
+Actions=AopenWithWine;BcreateWineShortcut;CsetWineWinXP;DsetWineWin7;EsetWineWin10;FStartWineConfig;GStartWineUninstaller;HStartWineTricks
 X-KDE-Submenu=XNL Ft. Wine
 
 [Desktop Action AopenWithWine]
@@ -35,3 +35,13 @@ Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winetricks win10'
 Name=Open Wine Configuration
 Icon=wine
 Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winecfg'
+
+[Desktop Action GStartWineUninstaller]
+Name=Open Wine Uninstaller
+Icon=wine
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" wine uninstaller'
+
+[Desktop Action HStartWineTricks]
+Name=Open Wintricks ('Config Tool')
+Icon=wine
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winetricks'
