@@ -34,16 +34,19 @@ Installs **qemu-kvm** and **Virtual Machine Manager** (plus the required basic s
 **XNLInstallRightClickMenus.sh**  
 This VERY simple 'helper script' will install the XNL Ft. Right-Click-Menus in your file browser (Dolphin for example). Please see the directory ***RightClickMenu*** for more detailed information about this 'feature'. IMPORTANT NOTE: This menu assumes you are using KDE, have VSCode installed AND that you are using the XNL Ft. Wine Base Setup!  
   
+**XNLInstalliPhoneHelpers.sh**  
+This script installs basic utils (NO extensive UI applications like iTunes or stuff like that) to be able to mount your iPhone to your PC so you can copy/move photo's and video's from your iPhone to your PC. It will also install three helper scripts which will help you pair your iPhone with your PC, to connect to you iPhone and one to properly unmount & disconnect from your iPhone.  
+  
 # How can I run them/They don't start!
 After you've downloaded the .sh script(s), or you have saved the contents of one to a new .sh file on your own pc, you will first need to open a terminal (in the same directory as the script), and then use the command **chmod +x [scriptname].sh**  
-
+  
 This will simply put make the script executable. Once you have done that you can just simply type the name of the script like this:  
 **./[scriptname].sh**  
-
+  
 **EXAMPLE:**  
 chmod +x XNLWineInstallFull.sh  
 ./XNLWineInstallFull.sh  
-
+  
 This would then install the XNL Ft. Base Wine setup we're using + all requirements.
   
 # Terminal? What Terminal? WHERE?
