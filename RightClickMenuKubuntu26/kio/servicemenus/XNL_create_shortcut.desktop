@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-executable;application/x-iso9660-appimage;inode/directory;
+Actions=createDesktopShortcut
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=XNL Ft. Functions
+
+[Desktop Action createDesktopShortcut]
+Name=Create Launcher (Shortcut)
+Icon=application-x-desktop
+Exec=bash -c 'target="%f"; dir="$(dirname "$target")"; name="$(basename "$target")"; dest="$dir/$name.desktop"; if [ -d "$target" ]; then cat << EOF > "$dest"\n[Desktop Entry]\nType=Link\nName=$name\nURL=$target\nIcon=folder-green\nEOF\nelse cat << EOF > "$dest"\n[Desktop Entry]\nType=Application\nName=$name\nExec="$target"\nIcon=preferences-system-windows\nTerminal=false\nX-KDE-SubstituteUID=false\nEOF\nfi; chmod +x "$dest"'

@@ -1,0 +1,58 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-ms-dos-executable;
+Actions=AopenWithWine;BopenWithWineParameters;CopenWithWConsole;CcreateWineShortcut;DsetWineWinXP;EsetWineWin7;FsetWineWin10;GStartWineConfig;HStartWineUninstaller;IStartWineTricks
+X-KDE-Submenu=XNL Ft. Wine
+
+[Desktop Action AopenWithWine]
+Name=Start with Wine
+Icon=wine
+Exec=env WINEPREFIX="$HOME/.wine_xnlft" wine32 "%f"
+
+[Desktop Action BopenWithWineParameters]
+Name=Start with Wine (and add parameters)
+Icon=wine
+Exec=bash -c 'params=$(kdialog --title "Wine Parameters" --inputbox "Enter parameters for your application:"); if [ $? -eq 0 ]; then env WINEPREFIX="$HOME/.wine_xnlft" wine32 "%f" $params; fi'
+
+
+[Desktop Action CopenWithWConsole]
+Name=Start with Wine Console
+Icon=wine
+Exec=konsole --noclose -e bash -c 'export WINEPREFIX="$HOME/.wine_xnlft"; cd "$(dirname "%f")"; wine32 "%f"'
+
+[Desktop Action CcreateWineShortcut]
+Name=Create Wine Launcher (Shortcut)
+Icon=wine
+Exec=bash -c 'target="%f"; dir="$(dirname "$target")"; name="$(basename "$target")"; dest="$dir/$name.desktop"; cat << EOF > "$dest"\n[Desktop Entry]\nType=Application\nName=$name\nExec=env WINEPREFIX=$HOME/.wine_xnlft wine32 "$target"\nIcon=wine\nTerminal=false\nX-KDE-SubstituteUID=false\nEOF\nchmod +x "$dest"'
+
+[Desktop Action DsetWineWinXP]
+Name=Set Wine to Windows XP Mode
+Icon=wine
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winetricks winxp'
+
+
+[Desktop Action EsetWineWin7]
+Name=Set Wine to Windows 7 Mode
+Icon=wine
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winetricks win7'
+
+[Desktop Action FsetWineWin10]
+Name=Set Wine to Windows 10 Mode
+Icon=wine
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winetricks win10'
+
+[Desktop Action GStartWineConfig]
+Name=Open Wine Configuration
+Icon=wine
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winecfg'
+
+[Desktop Action HStartWineUninstaller]
+Name=Open Wine Uninstaller
+Icon=wine
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" wine uninstaller'
+
+[Desktop Action IStartWineTricks]
+Name=Open Wintricks ('Config Tool')
+Icon=wine
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winetricks'
