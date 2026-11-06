@@ -4,6 +4,7 @@ X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=application/x-ms-dos-executable;
 Actions=AopenWithWine;BopenWithWineParameters;CopenWithWConsole;CcreateWineShortcut;DsetWineWinXP;EsetWineWin7;FsetWineWin10;GStartWineConfig;HStartWineUninstaller;IStartWineTricks;JOpenTerminalHere
 X-KDE-Submenu=XNL Ft. Wine32
+X-KDE-Priority=TopLevel
 
 [Desktop Action AopenWithWine]
 Name=Start with Wine
