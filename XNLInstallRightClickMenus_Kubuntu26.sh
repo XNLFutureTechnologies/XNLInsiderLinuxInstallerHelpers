@@ -32,7 +32,7 @@ fi
 
 # Sudo not really needed here though, but it will require the user to entier the password and thus
 # basically requiring an extra layer of confirmation
-sudo cp -r RightClickMenuKubuntu26/kio/servicemenus ~/.local/share/kio/servicemenus/
+sudo cp -r RightClickMenuKubuntu26/kio/servicemenus/* ~/.local/share/kio/servicemenus/
 
 echo " "
 echo "================================================================================"
