@@ -6,9 +6,12 @@ These scripts are mainly intended for our OWN INTERNAL use, but I decided to mak
 HOWEVER: Keep in mind that I do NOT give ANY support/help for/about these scripts, that using them is 100% at your own responsibility, and that they **might NOT be compatible for your system!**  
   
 AGAIN: These are mainly intended for our own use, and these (currently) assume the following system configuration:  
-Operating System: **Ubuntu/Kubuntu 24.04 LTS** (x64/64Bit)  
+Operating System: **Ubuntu/Kubuntu 26.04 LTS** (x64/64Bit)  
 Desktop Environment: **KDE**  
-Display System: **X11** (For most this does not matter, for the driver(s) it DOES though!)  
+Display System: **Wayland** (For most this does not matter, for the driver(s) it DOES though!)  
+
+# Kubuntu 24.04 Version EoL Note:
+The Kubuntu 24.04 version will remain in this repo, but will no longer be updated. You SHOULD still be able to use it as is, do however keep in mind that I will NOT add the new(er) menu options from the 26.04 version to that version, nor will I update it, add runtimes etc etc.  
 
 # No Pull Requests, Tickets Etc supported
 Due to these being of a more 'personal'/'inside' nature, I will NOT just randomly 'solve issues' or accept pull-requests. Like mentioned above: They are intended for our **OWN** use, but I just decided to also share them in the hopes that they might proof to be useful to others.
