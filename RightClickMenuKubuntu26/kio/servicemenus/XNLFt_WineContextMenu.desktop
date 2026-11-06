@@ -2,8 +2,8 @@
 Type=Service
 X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=application/x-ms-dos-executable;
-Actions=AopenWithWine;BopenWithWineParameters;CopenWithWConsole;CcreateWineShortcut;DsetWineWinXP;EsetWineWin7;FsetWineWin10;GStartWineConfig;HStartWineUninstaller;IStartWineTricks
-X-KDE-Submenu=XNL Ft. Wine
+Actions=AopenWithWine;BopenWithWineParameters;CopenWithWConsole;CcreateWineShortcut;DsetWineWinXP;EsetWineWin7;FsetWineWin10;GStartWineConfig;HStartWineUninstaller;IStartWineTricks;JOpenTerminalHere
+X-KDE-Submenu=XNL Ft. Wine32
 
 [Desktop Action AopenWithWine]
 Name=Start with Wine
@@ -29,30 +29,36 @@ Exec=bash -c 'target="%f"; dir="$(dirname "$target")"; name="$(basename "$target
 [Desktop Action DsetWineWinXP]
 Name=Set Wine to Windows XP Mode
 Icon=wine
-Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winetricks winxp'
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" WINE="wine32" winetricks winxp'
 
 
 [Desktop Action EsetWineWin7]
 Name=Set Wine to Windows 7 Mode
 Icon=wine
-Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winetricks win7'
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" WINE="wine32" winetricks win7'
 
 [Desktop Action FsetWineWin10]
 Name=Set Wine to Windows 10 Mode
 Icon=wine
-Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winetricks win10'
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" WINE="wine32" winetricks win10'
 
 [Desktop Action GStartWineConfig]
 Name=Open Wine Configuration
 Icon=wine
-Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winecfg'
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" wine32 winecfg'
 
 [Desktop Action HStartWineUninstaller]
 Name=Open Wine Uninstaller
 Icon=wine
-Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" wine uninstaller'
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" WINE="wine32" wine uninstaller'
 
 [Desktop Action IStartWineTricks]
 Name=Open Wintricks ('Config Tool')
 Icon=wine
-Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" winetricks'
+Exec=bash -c 'env WINEPREFIX="$HOME/.wine_xnlft" WINE="wine32" winetricks'
+
+[Desktop Action JOpenTerminalHere]
+Name=Open Terminal For Wine32 Prefix
+Icon=utilities-terminal
+Exec=bash -c 'dir=$(dirname "%f"); konsole --workdir "$dir" -e bash --rcfile <(cat ~/.bashrc; echo "export WINEPREFIX=$HOME/.wine_xnlft"; echo "export WINE=wine32"; echo "echo -e \"\\\\e[1;32m[Wine Environment Preloaded]\\\\e[0m\""; echo "echo \"WINEPREFIX=$HOME/.wine_xnlft\"")'
+
